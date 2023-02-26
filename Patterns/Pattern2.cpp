@@ -21,4 +21,4 @@ void printTriangle(int n) {
             cout << endl;
         }
     }
-};
+
