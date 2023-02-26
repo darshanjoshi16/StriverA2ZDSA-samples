@@ -23,5 +23,5 @@ void printSquare(int n) {
             cout << endl;
         }
     }
-};
+
 
