@@ -37,4 +37,4 @@ void printTriangle(int n) {
             
         }
 	}
-};
+
