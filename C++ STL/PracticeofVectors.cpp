@@ -122,6 +122,77 @@ int main()
       cout << it << endl;
   }
    
+   //================================================================================================
+   //we will understand how the various method of erase works on the vector
+
+   //for deleting the single element of the vector
+   //it will delete the 2nd value into the vector 
+   //resultant vector {20,43,66}
+       v.erase(v.begin()+1);
+    
+    //printing the vector
+    for(auto it: v)
+    {
+        cout << it << endl;
+    }
+   
+   //=================================================================================================
+      //for deleting the multiple elements of the vector
+      //v.erase(start,end)
+      //here for the end position we need to give the address of the element which is next after the element we lastly want to delete
+      //resultant vector {20,43}
+      
+      v.erase(v.begin()+2,v.end());
+      //here it will delete the 2 elements from the start address to ending address
+   
+   //===================================================================================================
+     //we will now understand how the various method of insert works
+    //for inserting the single element into the vector
+    //v.insert(position,value): it will add the value passed into the passed location
+    v.insert(v.begin(),10);
+    
+   //printing the vector
+    for(auto it: v)
+    {
+        cout << it << endl;
+    }
+   
+   //===================================================================================================
+   //for inserting the multiple elements at once in the vector
+   //v.insert(position,number of values,value): it will add the multiple  values passed into the passed location
+    v.insert(v.begin(),2,5);
+    //printing the vector
+    for(auto it: v)
+    {
+        cout << it << endl;
+    }
+   
+   //====================================================================================================
+   //now we will understand how we can insert one vector into the another vector
+   //v.insert(position,v2.begin(),v2.end());
+   
+   //defining one vector
+    vector<int>v;
+    v.push_back(20);
+    v.emplace_back(43);
+    v.emplace_back(37);
+    v.emplace_back(66);
+
+   //defining another vector
+   vector<int>v2(2,43);
+   
+   //adding vector v2 into vector v
+   v.insert(v.begin()+3,v2.begin(),v2.end());
+   
+   //printing the vector
+   for(auto it:v)
+   {
+       cout << it << endl;
+   }
+   
+   //========================================================================================================
+    //determining the size of the vector
+      cout << v.size();
    
    return 0;
    
