@@ -193,6 +193,36 @@ int main()
    //========================================================================================================
     //determining the size of the vector
       cout << v.size();
+    //pop_back used for removal of the last element of the vector
+      v.pop_back();
+   
+   //printing the vector
+   for(auto it:v)
+   {
+       cout << it << endl;
+   }
+   
+   //========================================================================================================
+    //defining the second vector
+     vector<int>v2(4,50);
+  
+    //using the swap method to swapping the content of the vectors
+     v.swap(v2);
+  
+    //printing the vector to see if the operation succeed or not
+     for(auto it:v)
+     {
+        cout << it <<endl;
+     }
+   
+   //============================================================================================================
+   //clear function is used to clear out the whole vector
+    v.clear();
+    
+    //empty function is checking if the vector is empty or not
+    //1 = True
+    //0 = False
+    cout << v.empty();
    
    return 0;
    
