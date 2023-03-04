@@ -25,8 +25,23 @@ int main()
     cout << pq.size() << endl;
     
     //we can also use the swap and empty functions same as per the stack and queue
+    //here this pq is acting as the max heap where max value always stays the top of the tree or container
   
   //========================================================================================================
+    
+    //now we will use the priority queue as the minimum heap
+   priority_queue<int,vector<int>,greater<int>>pq;
+   pq.push(20);
+   pq.emplace(43);
+   pq.emplace(54);
+   pq.push(19);
+   
+   //it will store the min value at the top
+   cout << pq.top();
+   
+   /* Here the push => O(LogN)
+   Pop=> O(LogN)
+   Top accessment => O(1) */
     
     return 0;
 }
